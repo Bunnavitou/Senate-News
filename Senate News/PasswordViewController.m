@@ -32,7 +32,7 @@
 -(void)viewDidLoad{
     [super viewDidLoad];
     
-    
+    //=======check on screen to support all keypad
     if([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad){
    
         _keyPadHeight.constant = 400;
@@ -49,7 +49,7 @@
     }
 
     
-    //=======clear
+    //=======disable click on pin button
     numberCount = 0;
     for(int i=1;i<7;i++){
         UIButton *button=(UIButton *)[self.view viewWithTag:100+i];
@@ -92,8 +92,8 @@
     if(numberCount>=6){
         numberCount=6;
         
+        //=====Just for Testing
         if([[NSString stringWithFormat:@"%@%@%@%@%@%@",str1,str2,str3,str4,str5,str6]  isEqual: @"123456"]){
-            
             _btnCheckMoveOn.titleLabel.text = @"ត្រឹមត្រូវ ចុចបន្ត";
             _btnCheckMoveOn.userInteractionEnabled = true;
         }else{
