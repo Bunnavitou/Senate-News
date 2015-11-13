@@ -17,6 +17,9 @@
     NSString *str4;
     NSString *str5;
     NSString *str6;
+    
+    
+
 }
 @end
 
@@ -31,6 +34,7 @@
 
 -(void)viewDidLoad{
     [super viewDidLoad];
+    
     
     
     if([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad){
@@ -92,15 +96,18 @@
     if(numberCount>=6){
         numberCount=6;
         
-        if([[NSString stringWithFormat:@"%@%@%@%@%@%@",str1,str2,str3,str4,str5,str6]  isEqual: @"123456"]){
-            
+        NSArray *array = [NSArray arrayWithObjects: @"123456", @"000000",@"111111", @"456123", nil];
+        
+        if ([array containsObject: [NSString stringWithFormat:@"%@%@%@%@%@%@",str1,str2,str3,str4,str5,str6]]){
             _btnCheckMoveOn.titleLabel.text = @"ត្រឹមត្រូវ ចុចបន្ត";
             _btnCheckMoveOn.userInteractionEnabled = true;
-        }else{
             
+            
+        }else{
             _btnCheckMoveOn.titleLabel.text = @"មិនត្រឹមត្រូវទេ";
             _btnCheckMoveOn.userInteractionEnabled = false;
         }
+
         
         _keyCorrentUp.constant = 10;
         [UIView animateWithDuration:2
