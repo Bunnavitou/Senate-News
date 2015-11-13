@@ -102,10 +102,9 @@
             _btnCheckMoveOn.userInteractionEnabled = false;
         }
         
-
+        _keyCorrentUp.constant = 10;
         [UIView animateWithDuration:2
                          animations:^{
-                             _keyCorrentUp.constant = 10;
                              [self.view setNeedsLayout];
                          }];
     }
@@ -119,9 +118,9 @@
         numberCount=0;
     }
     
+    _keyCorrentUp.constant = -35;
     [UIView animateWithDuration:2
                      animations:^{
-                         _keyCorrentUp.constant = -35;
                          [self.view setNeedsLayout];
                      }];
 

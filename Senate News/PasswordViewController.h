@@ -18,7 +18,6 @@
 
 @property (strong, nonatomic) IBOutlet UIButton *btnCheckMoveOn;
 
-
 @property (strong, nonatomic) IBOutlet NSLayoutConstraint *keyUpLabelSpp;
 
 @property (strong, nonatomic) IBOutlet NSLayoutConstraint *keyPadHeight;
